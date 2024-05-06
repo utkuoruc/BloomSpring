@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registry Submitted</title>
+    <!-- Link to Green Theme CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5 mb-4 text-center">Registry Submitted</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Submitted Fault Registry</h5>
+            <p class="card-text">Fields:
+                <span th:each="field, iterStat : ${submittedRegistry.fields}">
+                        <span th:text="${field}"></span>
+                        <span th:if="${!iterStat.last}">, </span>
+                    </span>
+            </p>
+            <p class="card-text">Description:
+                <span th:text="${submittedRegistry.description}"></span>
+            </p>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <a th:href="@{/create-registry}" class="btn btn-primary">Create Another Registry</a>
+    </div>
+</div>
+</body>
+</html>
