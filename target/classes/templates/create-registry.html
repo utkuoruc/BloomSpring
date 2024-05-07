@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Fault Registry</title>
+    <!-- Link to Green Theme CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5 mb-4 text-center">Create Fault Registry</h1>
+    <form action="#" th:action="@{/submit-registry}" method="post">
+        <div class="form-group">
+            <label for="fields">Fields to Report Fault:</label>
+            <select class="form-control" id="fields" name="fields" multiple>
+                <option value="Engine">Engine</option>
+                <option value="Transmission">Transmission</option>
+                <option value="Brakes">Brakes</option>
+                <option value="Electrical System">Electrical System</option>
+                <option value="Electrical System">Bodywork</option>
+                <option value="Insurance Warranty">Insurance/Warranty</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>
