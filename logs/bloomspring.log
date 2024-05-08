@@ -59,3 +59,4 @@
 2024-05-07 02:55:26 INFO  LoggingInterceptor:13 - Request URL: http://localhost:8080/registry-submitted
 2024-05-08 03:22:45 INFO  LoggingInterceptor:13 - Request URL: http://localhost:8080/
 2024-05-08 03:22:46 INFO  LoggingInterceptor:13 - Request URL: http://localhost:8080/create-registry
+2024-05-08 04:02:59 INFO  LoggingInterceptor:13 - Request URL: http://localhost:8080/
