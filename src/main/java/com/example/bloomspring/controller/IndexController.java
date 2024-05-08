@@ -14,7 +14,10 @@ public class IndexController {
     public String getIndexPage(){
         return "index"; // Assuming your index HTML file is named "index.html"
     }
-
+    @GetMapping("main")
+    public String mainPage(){
+        return "main";
+    }
     @GetMapping("/create-registry")
     public String showCreateRegistryPage(Model model) {
         // Add logic to populate model attributes if needed
